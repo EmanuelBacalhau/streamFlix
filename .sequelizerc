@@ -1,0 +1,12 @@
+const path = require("path");
+
+module.exports = {
+    // Adicionando caminho exato dos dados para criação e conexão ao banco de dados
+    "config": path.resolve("config", "sequelizeCli.js"),
+    // Adicionando caminho exato dos models
+    "models-path": path.resolve("src", "models"),
+    // Adicionando caminho exato dos seeders
+    "seeders-path": path.resolve("src", "database", "seeders"),
+    // Adicionando caminho exato das migrations
+    "migrations-path": path.resolve("src", "database", "migrations")
+};
