@@ -1,14 +1,16 @@
+// Configuração do painel administrativo
 import AdminJS from "adminjs";
 import AdminJSExpress from "@adminjs/express";
 import AdminJSSequelize from "@adminjs/sequelize";
 import { sequelize } from "../database";
-import path from "path";
+import { adminJsResources } from "./resources";
 
 AdminJS.registerAdapter(AdminJSSequelize);
 
 export const adminJs = new AdminJS({
     databases: [sequelize],
     rootPath: "/admin",
+    resources: adminJsResources,
     branding: {
         companyName: "StreamFlix",
         logo: "/logo_streamFlix.png",
