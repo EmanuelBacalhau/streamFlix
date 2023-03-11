@@ -30,10 +30,6 @@ module.exports = {
                 type: Sequelize.STRING
             },
 
-            thumbnail_url: {
-                type: Sequelize.STRING
-            },
-
             seconds_long: {
                 type: Sequelize.INTEGER
             },

@@ -7,16 +7,12 @@ export interface Episode {
     synopsis: string;
     order: string;
     videoUrl: string;
-    thumbnailUrl: string;
     secondsLong: number;
     courseId: number;
 }
 
 export interface EpisodeCreationAttributes
-    extends Optional<
-        Episode,
-        "id" | "videoUrl" | "thumbnailUrl" | "secondsLong"
-    > {}
+    extends Optional<Episode, "id" | "videoUrl" | "secondsLong"> {}
 
 export interface EpisodeInstance
     extends Model<Episode, EpisodeCreationAttributes>,
@@ -46,10 +42,6 @@ export const Episode = sequelize.define<EpisodeInstance, Episode>("Episode", {
     },
 
     videoUrl: {
-        type: DataTypes.STRING,
-    },
-
-    thumbnailUrl: {
         type: DataTypes.STRING,
     },
 
